@@ -7,9 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormcompComponent implements OnInit {
   public Disabled=true;
-  public y="yash raj _"
+  public y="yash raj"
   public btnText="Sign UP";
-public changedtext="Form Submitted"
+public changedtext="Form Submitted";
 
   constructor() { 
 
