@@ -11,7 +11,7 @@
   <div class="container">
     <h2>Form </h2>
  
-    <form action="/action_page.php">
+    <form class="form-signin" (ngSubmit)="onSubmit()">
       <div class="row">
         <div class="col">
           <input type="text" class="form-control" id="name" placeholder="first name" name="First name">
@@ -23,15 +23,35 @@
 
       <div class="row">
         <div class="col">
-          <input type="text" class="form-control" id="email" placeholder="Enter email" name="email">
+         
+          <input [(ngModel)]="signup.mail" type="email" name="mail" class="form-control" placeholder="Email" #mail="ngModel" ngModel email required  >
+          <div class="alert alert-danger" *ngIf="mail.invalid && (mail.dirty || mail.touched)">                               
+            <div *ngIf="mail.hasError('required')">
+              input Email.
+            </div>
+            <div *ngIf="mail.hasError('email')">
+              Enter email.
+            </div>
+          </div>
+          
         </div><br>
         <div class="col">
-          <input type="password" class="form-control" placeholder="Enter password" name="pswd"></div>
+          <input type="number" class="form-control" placeholder="age" name="age"></div>
       </div><br>
-    
 
+      <div class="row">
+        <div class="col">
+          <input [(ngModel)]="signup.phonenumber" type="tel" name="phonenumber" class="form-control" placeholder="Phone Number" #phonenumber="ngModel" ngModel minlength="10"  required>
+          <div class="alert alert-danger" *ngIf="phonenumber.invalid && (phonenumber.dirty || phonenumber.touched)">                               
+            <div *ngIf="phonenumber.hasError('required')">Contact required.</div>
+            <div *ngIf="phonenumber.hasError('minlength')">Enter valid phone number .</div>
+           
+          </div>   
 
-      <form action="/action_page.php">
+        </div>
+
+        <div class="col">
+
         <label for="city">Choose City  <br>
         </label><br>
         <select name="city" id="city">
@@ -40,23 +60,63 @@
           <option value="Delhi">Delhi</option>
           <option value="Ghaziabad">Ghaziabad</option>
           <option value="Gurgaon">Gurgaon</option> -->
-        </select></form><br>
+        </select> </div> <br>
+        </div><br>
+
+        <div class="row">
+          <div class="col ">
+            <input [(ngModel)]="signup.hno" type="number" name="hno" class="form-control" placeholder="House no."  #hno="ngModel" required>
+            <div class="alert alert-danger" *ngIf="hno.errors  && (hno.dirty || hno.touched)">              
+              enter Home No.
+            </div>
+          </div>
+          <div class="col ">
+            <input [(ngModel)]="signup.address" type="text" name="address" class="form-control" placeholder="Address"  #address="ngModel" required>
+            <div class="alert alert-danger" *ngIf="address.errors  && (address.dirty || address.touched)">              
+              Enter Address 
+            </div>
+          </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col">
+              <input [(ngModel)]="signup.password" type="password" name="Password" class="form-control" placeholder="Create password"  #password="ngModel" ngModel minlength="8" required>
+              <div class="alert alert-danger" *ngIf="password.invalid">              
+                <div *ngIf="password.hasError('required')">enter password</div>
+                <div *ngIf="password.hasError('minlength')">Minimum 8 characters </div>
+              </div>
+            </div>
+            <div class="col">
+              <input [(ngModel)]="signup.confirmPass" type="password" name="confirmPass" class="form-control" placeholder="confirm password"  #confirmPass="ngModel" ngModel minlength="6" required>
+              <div class="alert alert-danger" *ngIf="signup.password!=signup.confirmPass">              
+                Password incorrect
+
+              </div>
+        
+            </div>
+          </div>
+
 
         
 
-        
+          <br><br>
       <!-- <button (click)="onClick()" type="submit" class="btn btn-primary mt-3">Submit</button>
       <button type="button" class="btn btn-danger mt-3">Cancel</button> -->
-      <button  (click)="changeText()" type="button" class="btn btn-primary"  >{{btnText}}</button>
-      
+      <div class="row">
+        <div class="col">
+          <button  (click)="onSubmit()" type="button" class="btn btn-primary "  >{{btnText}}</button>
+        </div>
+        <div class="col">
       <button  type="button" class="btn btn-danger" (click)="onClick()">Clear</button>
+        </div>
+      </div>
       <!-- <div [hidden]="!isDisplay">
         <a href="#"  class="sign" (click)="toggleDisplay()">{{y.title1}}</a>
     </div>
     <div [hidden]="isDisplay">
         <a href="#" class="sign" (click)="toggleDisplay()">{{y.title2}}</a>
     </div>      -->
-      
+    
 
     </form>
   </div>

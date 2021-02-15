@@ -11,5 +11,8 @@ export class HeadercompComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  
+  headerbuttons = [{"component1":"Home"}, {"component2": "Dashboard"}, {"component3": "About"}, ];
+
 
 }

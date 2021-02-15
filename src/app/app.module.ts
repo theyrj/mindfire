@@ -9,6 +9,7 @@ import { FootercompComponent } from './footercomp/footercomp.component';
 import { FormcompComponent } from './formcomp/formcomp.component';
 import { ImgcompComponent } from './imgcomp/imgcomp.component';
 import { DashComponent } from './dash/dash.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { DashComponent } from './dash/dash.component';
     FootercompComponent,
     FormcompComponent,
     ImgcompComponent,
-    DashComponent
+    DashComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

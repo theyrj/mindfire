@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-formcomp',
@@ -21,6 +22,8 @@ public changedtext="Form Submitted";
   city = [{"city":"Noida"}, {"city": "gurgaon"}, {"city": "delhi"}];
   ngOnInit(): void {
   }
+  signup:any={};
+
   // head_rit =[{'title1':'Sign Up','title2':'LogIn'}]
   // isDisplay=false;
   // toggleDisplay()
@@ -32,5 +35,8 @@ public changedtext="Form Submitted";
 
 changeText(){  
 this.btnText=this.changedtext;
+}
+onSubmit(){
+  alert(JSON.stringify(this.signup));
 }
 }
