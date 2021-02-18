@@ -12,6 +12,8 @@ import { FormcompComponent } from './formcomp/formcomp.component';
 import { ImgcompComponent } from './imgcomp/imgcomp.component';
 import { DashComponent } from './dash/dash.component';
 import { AboutComponent } from './about/about.component';
+import { HomeComponent } from './home/home.component';
+import { GitHubService } from './github.service';
 
 @NgModule({
   declarations: [
@@ -21,16 +23,19 @@ import { AboutComponent } from './about/about.component';
     FormcompComponent,
     ImgcompComponent,
     DashComponent,
-    AboutComponent
+    AboutComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     // RouterModule.forRoot(routes),
-    FormsModule, HttpClientModule,
+    FormsModule, 
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
+  providers: [GitHubService]
   // const routes: Routes = []
 })
 export class AppModule { }
