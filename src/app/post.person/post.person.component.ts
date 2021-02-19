@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from './api.service';
+import { ApiService } from '../api.service';
 import { Person } from './person';
 
 
@@ -37,8 +37,4 @@ export class Post.PersonComponent implements OnInit {
       })      
   }
  
-}
-export class Person {
-  id:number
-  name:string
 }
