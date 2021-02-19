@@ -8,15 +8,15 @@ import { repos } from '../repos';
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent implements OnInit {
-  userName: string = "tektutorialshub"
+  userName: string = "theyrj"
   repos: repos[];
- 
-  loading: boolean = false;
+ loading: boolean = false;
   errorMessage;
 
   constructor(private githubService: GitHubService) { }
 
   
+ 
   public getRepos() {
     this.loading = true;
     this.errorMessage = "";

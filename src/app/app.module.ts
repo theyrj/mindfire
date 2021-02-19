@@ -14,6 +14,7 @@ import { DashComponent } from './dash/dash.component';
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { GitHubService } from './github.service';
+import { Post } from './post.person/post.person.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { GitHubService } from './github.service';
     ImgcompComponent,
     DashComponent,
     AboutComponent,
-    HomeComponent
+    HomeComponent,
+    Post.PersonComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +35,7 @@ import { GitHubService } from './github.service';
     FormsModule, 
     HttpClientModule,
   ],
-  providers: [],
+
   bootstrap: [AppComponent],
   providers: [GitHubService]
   // const routes: Routes = []
