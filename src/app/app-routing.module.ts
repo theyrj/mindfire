@@ -1,8 +1,8 @@
-import { HomeComponent } from './home/home.component';
+import { HomeComponent } from './home/home/home.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DashComponent } from './dash/dash.component';
-import { AboutComponent } from './about/about.component';
+import { DashComponent } from './other/dash/dash.component';
+import { AboutComponent } from './other/about/about.component';
 
 const routes: Routes = [{path: 'dash',component:DashComponent}, 
 {path: 'about',component:AboutComponent},

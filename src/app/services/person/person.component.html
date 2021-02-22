@@ -1,0 +1,57 @@
+<p>post.person works!</p>
+
+<head>
+   
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css">
+  
+</head>
+
+<h1>{{title}}</h1>
+ 
+<div>
+  <div class="row">
+    <div class="col">
+  <div>
+    <label>Name: </label>
+    <input [(ngModel)]="person.name" />
+  </div></div>
+  <br><br>
+  <div class="col">
+  <div>
+    <label>last name :</label>
+    <input [(ngModel)]="person.lastname" />
+  </div>
+  <br> </div></div> <br>
+  <div class="row">
+  <div class="col">
+  <div>
+    <label>Email:</label>
+    <input [(ngModel)]="person.email" />
+  </div>
+  <br></div></div></div><br>
+  <div>
+    <button (click)="addPerson()" type="button" class="btn btn-primary ">Add</button>
+  </div>
+</div>
+ 
+<table class='table'>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>last name</th>
+      <th>email</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let person of people;">
+      <td>{{person.id}}</td>
+      <td>{{person.name}}</td>
+      <td>{{person.lastname}}</td>
+      <td>{{person.email}}</td>
+
+    </tr>
+  </tbody>
+</table>

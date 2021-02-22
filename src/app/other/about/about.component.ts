@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GitHubService } from './github.service';
-import { repos } from '../repos';
+import { repos } from '../../repos';
 
 @Component({
   selector: 'app-about',

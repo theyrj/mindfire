@@ -6,15 +6,15 @@ import { RouterModule, Routes } from '@angular/router'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeadercompComponent } from './headercomp/headercomp.component';
-import { FootercompComponent } from './footercomp/footercomp.component';
-import { FormcompComponent } from './formcomp/formcomp.component';
-import { ImgcompComponent } from './imgcomp/imgcomp.component';
-import { DashComponent } from './dash/dash.component';
-import { AboutComponent } from './about/about.component';
-import { HomeComponent } from './home/home.component';
-import { GitHubService } from './github.service';
-import { Post } from './post.person/post.person.component';
+import { HeadercompComponent } from './common/header/header.component';
+import { FootercompComponent } from './common/footer/footer.component';
+import { FormcompComponent } from './home/form/form.component';
+import { ImgcompComponent } from './home/imgcomp/imgcomp.component';
+import { DashComponent } from './other/dash/dash.component';
+import { AboutComponent } from './other/about/about.component';
+import { HomeComponent } from './home/home/home.component';
+import { GitHubService } from './services/github.service';
+import { Post } from './services/person/person.component';
 
 @NgModule({
   declarations: [
