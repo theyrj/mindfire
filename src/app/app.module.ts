@@ -15,6 +15,11 @@ import { AboutComponent } from './other/about/about.component';
 import { HomeComponent } from './home/home/home.component';
 import { GitHubService } from './services/github.service';
 import { Post } from './services/person/person.component';
+import { appRoutes } from './routes';
+
+import { SignUpComponent } from './authenticate/sign-up/sign-up.component';
+import { SignInComponent } from './authenticate/sign-in/sign-in.component';
+import { UserComponent } from './authenticate/user/user.component';
 
 @NgModule({
   declarations: [
@@ -26,12 +31,16 @@ import { Post } from './services/person/person.component';
     DashComponent,
     AboutComponent,
     HomeComponent,
-    Post.PersonComponent
+    Post.PersonComponent,
+    
+    SignUpComponent,
+    SignInComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    // RouterModule.forRoot(routes),
+    RouterModule.forRoot(appRoutes),
     FormsModule, 
     HttpClientModule,
   ],
